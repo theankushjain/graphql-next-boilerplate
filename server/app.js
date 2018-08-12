@@ -3,7 +3,7 @@ const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
 const mongoose = require("mongoose");
 const schema = require("./schema/schema");
 
-const PORT = 3000;
+const PORT = 4000;
 
 const app = express();
 
