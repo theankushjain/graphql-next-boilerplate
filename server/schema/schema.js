@@ -1,4 +1,3 @@
-const _ = require("lodash");
 const { ApolloServer, gql } = require("apollo-server-express");
 const Book = require("./../models/book");
 const Author = require("./../models/author");
@@ -36,6 +35,8 @@ var typeDefs = gql`
   type Query {
     book(id: ID): Book
     author(id: ID): Author
+    books: [Book]
+    authors: [Author]
   }
 
   type Mutation {
@@ -54,6 +55,14 @@ var resolvers = {
     author: (root, { id }) => {
       //   return _.find(authors, { id });
       return Author.findById(id);
+    },
+
+    books: root => {
+      return Book.find();
+    },
+
+    authors: root => {
+      return Author.find();
     }
   },
   Mutation: {

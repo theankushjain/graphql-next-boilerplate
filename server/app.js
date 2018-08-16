@@ -8,7 +8,8 @@ const PORT = 4000;
 const app = express();
 
 mongoose.connect(
-  "mongodb://Ankush:at18zw9c18@ds257551.mlab.com:57551/donorsdome"
+  "mongodb://Ankush:at18zw9c18@ds257551.mlab.com:57551/donorsdome",
+  { useNewUrlParser: true }
 );
 mongoose.connection.once("open", () => {
   console.log("Connected to database");

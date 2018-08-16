@@ -11,9 +11,15 @@
   "author": "Ankush",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "apollo-boost": "^0.1.13",
+    "graphql": "^0.13.2",
     "graphql-tools": "^3.1.1",
+    "isomorphic-unfetch": "^2.1.1",
     "next": "^6.1.1",
+    "node-sass": "^4.9.3",
     "react": "^16.4.2",
+    "react-apollo": "^2.1.11",
     "react-dom": "^16.4.2"
   }
 }
